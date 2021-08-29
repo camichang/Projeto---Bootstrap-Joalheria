@@ -1,0 +1,140 @@
+a{
+    text-decoration: none;
+    color: #D9C771;
+ }
+ a:hover{
+    text-decoration: none;
+    color: whitesmoke;
+ }
+
+ .backtotop {
+    position: fixed;
+    bottom: 10px; 
+    right: 0px; 
+    color: #000000; 
+    font-size: 12px;
+    padding: 10px; 
+    letter-spacing: 1.0px;
+    opacity: 0.9;
+    
+}
+           
+.backtotop:hover {
+color: #ffffff;
+text-decoration: none; 
+bottom: 10px; 
+right: 0px; 
+padding: 10px;
+
+}
+
+#banner_1{
+    width: 100%;
+}
+body{
+    background-color: #F2F2F2;
+}
+
+#copyright {
+    text-align: center;
+    color: #D9C771;
+    background-color: #060440;
+}
+
+footer {
+    margin-top: 3vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #060440;
+    color: #D9C771;
+    gap: 0;
+}
+
+#footer_menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3vw;
+    text-decoration: none;
+}
+
+#foto1:hover{
+    transform: scale(1.2);
+}
+#foto2:hover{
+    transform: scale(1.2);
+}
+#foto3:hover{
+    transform: scale(1.2);
+}
+#foto4:hover{
+    transform: scale(1.2);
+}
+#foto5:hover{
+    transform: scale(1.2);
+}
+#foto6:hover{
+    transform: scale(1.2);
+}
+
+#foto7:hover{
+    transform: scale(1.2);
+}
+#foto8:hover{
+    transform: scale(1.2);
+}
+#foto9:hover{
+    transform: scale(1.2);
+}
+
+h1{
+    font-family: 'Tangerine', cursive;
+    font-size: 80px;
+    color: #D9C771;
+}
+h2{
+    font-family: 'Tangerine', cursive;
+    font-size: 60px;
+    color: #0B1926;
+}
+
+h3{
+    font-family: 'Tangerine', cursive;
+    font-size: 50px;
+}
+#home_1, #home_2{
+    width: 40vw;
+    }
+li {
+    list-style: none;
+}
+#logo1{
+    width: 100%;
+}
+
+#logo_li img {
+    width: 7vw;
+    align-items: center;
+}
+
+nav, header{
+    background-color: #060440;
+    color: #D9C771;
+}
+
+p{
+    text-indent: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+#quemsomos1, #quemsomos2{
+    border-radius: 50%;
+    border: 1px solid rgb(139, 131, 131);    
+}
+#titulo_3, #titulo_4, #titulo_5, #titulo_6, #titulo_9 {
+    font-size: 60px;
+    font-family: 'Tangerine', cursive;
+}
+

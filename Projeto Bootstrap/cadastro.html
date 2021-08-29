@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/override.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+    <script src="./js/jquery-3.6.0.min copy.js"></script>
+    <script src="./js/scriptteste.js"></script>
+    <title>Cadastro</title>
+</head>
+
+<body>
+
+    <header>
+        <section class="row mr-0">
+            <section class="col-2 mt-3 ml-5 mb-3">
+                <a href="index.html"><img src="./img/WhatsApp Image 2021-08-28 at 18.51.37.png" width="150" height="150"
+                        class="img-fluid" alt=""></a>
+            </section>
+            <section class="col-6 mt-5 ml-0">
+                <h1 class="text-left">Handmade's Jewelry</h1>
+            </section>
+            <section class="col-3">
+                <p></p>
+            </section>
+        </section>
+    </header>
+    <section class="menu">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <section class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <section class="navbar-nav">
+                    <a class="nav-item nav-link" href="./index.html">Home <span class="sr-only">(Página
+                            atual)</span></a>
+                    <a class="nav-item nav-link" href="./quemsomos.html">Quem Somos</a>
+                    <a class="nav-item nav-link" href="./parceiros.html">Parceiros</a>
+                    <a class="nav-item nav-link active" href="./cadastro.html">Torne-se um Parceiro</a>
+                    <section class="dropdown">
+                        <a class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="./parceiros.html" id="navbarDropdownMenuLink"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Produtos
+                            </a>
+                            <section class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="./img/banner7.jpg" target="_blank">Diamantes</a>
+                                <a class="dropdown-item" href="./img/banner2.jpg" target="_blank">Pedras Preciosas</a>
+                                <a class="dropdown-item" href="./img/foto17.jpg" target="_blank">Ouro</a>
+                            </section>
+                    </section>
+                </section>
+            </section>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                <button class="btn btn-light my-2 my-sm-0 mr-5" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg></button>
+            </form>
+        </nav>
+    </section>
+   
+    <section class="container" id="form_cadastro">
+        <h2 class="mt-5">Quer ser nosso Parceiro? Cadastre-se abaixo!
+            <hr>
+        </h2>
+        <form class="validar" id="form_cadastro">
+            <h3 class="mt-4">Dados da Empresa
+                <hr>
+            </h3>
+            <section class="form-row">
+                <section class="col-md-12 mb-3">
+                    <section class="input-group">
+                        <section class="input-group-prepend">
+                            <span class="input-group-text">Nome Fantasia</span>
+                        </section>
+                        <input type="text" class="form-control" id="form_nome_fantasia" placeholder="Nome da Empresa"
+                            onblur="valida_nome_fantasia(this)" onkeyup="maiuscula(this)">
+                    </section>
+                </section>
+            </section>
+            <section class="form-row">
+                <section class="col-md-12 mb-3">
+                    <section class="input-group">
+                        <section class="input-group-prepend">
+                            <span class="input-group-text">Nome da Empresa</span>
+                        </section>
+                        <input type="text" class="form-control" id="form_nome_empresa" placeholder="Nome da Empresa"
+                            onblur="valida_nome_empresa(this)" onkeyup="maiuscula(this)">
+                    </section>
+                </section>
+            </section>
+            <section class="form-row">
+                <section class="col-md-12 mb-3">
+                    <section class="input-group">
+                        <section class="input-group-prepend">
+                            <span class="input-group-text">CNPJ</span>
+                        </section>
+                        <input type="text" class="form-control" id="form_cnpj" placeholder="CNPJ" maxlength="14"
+                            onblur="valida_cnpj(this)">
+                    </section>
+                </section>
+            </section>
+            <section class="form-row">
+                <section class="col-md-6 mb-3">
+                    <section class="input-group">
+                        <section class="input-group-prepend">
+                            <span class="input-group-text">Endereço</span>
+                        </section>
+                        <input type="text" class="form-control" id="form_end" placeholder="Rua dos Bobos"
+                            onblur="valida_end(this)" onkeyup="maiuscula(this)">
+                    </section>
+                </section>
+                <section class="col-md-2 mb-3">
+                    <section class="input-group">
+                        <section class="input-group-prepend">
+                            <span class="input-group-text">Número</span>
+                        </section>
+                        <input type="text" class="form-control" id="form_num_casa" placeholder="Número"
+                            onblur="valida_num_end(this)">
+                    </section>
+                </section>
+                <section class="col-md-4 mb-3">
+                    <section class="input-group">
+                        <section class="input-group-prepend">
+                            <span class="input-group-text">Complemento</span>
+                        </section>
+                        <input type="text" class="form-control" id="form_complemento" placeholder="Complemento"
+                            onblur="valida_complemento(this)" onkeyup="maiuscula(this)">
+                    </section>
+                </section>
+            </section>
+            <section class="form-row">
+                <section class="col-md-4 mb-3">
+                    <section class="input-group">
+                        <section class="input-group-prepend">
+                            <span class="input-group-text">Cidade</span>
+                        </section>
+                        <input type="text" class="form-control" id="form_cidade" placeholder="Cidade"
+                            onblur="valida_cidade(this)" onkeyup="maiuscula(this)">
+                    </section>
+                </section>
+                <section class="col-md-4 mb-3">
+                    <section class="input-group">
+                        <section class="input-group-prepend">
+                            <span class="input-group-text">Cep</span>
+                        </section>
+                        <input type="text" class="form-control" id="form_cep" placeholder="Cep"
+                            onblur="valida_cep(this)">
+                    </section>
+                </section>
+                <section class="col-md-4 mb-3">
+                    <section class="input-group">
+                        <section class="input-group-prepend">
+                            <span class="input-group-text">Estado</span>
+                        </section>
+                        <select class="custom-select" id="form_estado">
+                            <option selected>Escolha...</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                    </section>
+                </section>
+            </section>
+            <h3 class="mt-5">Responsável Legal
+                <hr>
+            </h3>
+            <section class="form-row">
+                <section class="col-md-8 mb-3">
+                    <section class="input-group">
+                        <section class="input-group-prepend">
+                            <span class="input-group-text">Nome Completo</span>
+                        </section>
+                        <input type="text" aria-label="First name" class="form-control" placeholder="Nome Completo"
+                            onblur="valida_nome(this)" onkeyup="maiuscula(this)" id="nome_resp">
+                    </section>
+                </section>
+                <section class="col-md-4 mb-3">
+                    <section class="input-group">
+                        <section class="input-group-prepend">
+                            <span class="input-group-text">Contato</span>
+                        </section>
+                        <input type="text" id="form_telefone" class="form-control" placeholder="Telefone"
+                            onblur="valida_telefone(this)" aria-label="Telefone">
+                    </section>
+                </section>
+            </section>
+            <section class="form-row">
+                <p></p>
+                <section class="col-md-12 mb-3">
+                    <section class="input-group">
+                        <section class="input-group-prepend">
+                            <span class="input-group-text">E-mail</span>
+                        </section>
+                        <input type="text" class="form-control" id="form_email" placeholder="E-mail"
+                            onblur="valida_email(this)">
+                    </section>
+                </section>
+            </section>
+            <section class="form-check">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="opcao2">
+                <label class="form-check-label" for="inlineCheckbox2">Quero receber novidades por e-mail, celular,
+                    mensagem
+                    de texto, por correio ou telefone.</label>
+            </section>
+    
+        <section class="clear">
+        </section>
+        <button class="btn btn-outline-secondary mt-3" type="submit" onclick="enviar_dados()">Enviar</button>
+        <button type="reset" class="btn btn-outline-secondary mr-3 mt-3">Limpar</button>
+    </form>
+    </section>
+
+    <a href="#" class="backtotop">
+        <img src="./img/ui.totop.png" width="50px" height="50px">
+        <label for="logo_li">Topo</label>
+    </a>
+    <footer>
+        <section id="footer_menu">
+            <section class="menu_footer">
+                <li id="logo_li"><img src="./img/WhatsApp Image 2021-08-28 at 18.51.37.png" alt="">
+            </section>
+            <section class="menu_footer">
+                <ul>
+                    <li>Compras somente por <a href="./parceiros.html">Parceiros</a></li>
+                    <li>Fique por dentro das nossas novidades pelo <a href="#">Instagram</a></li>
+                    <li>Participe dos nossos Workshops e Oficinas</li>
+                </ul>
+            </section>
+            <section class="menu_footer">
+                <ul>
+                    <li><a href="#">Atêlie Hmj</a></li>
+                    <li><a href="#">Mapa do site</a></li>
+                    <li><a href="#">Quer ser nosso parceiro</a></li>
+                </ul>
+            </section>
+            <section class="menu_footer">
+                <ul>
+                    <li><a href="#">Política de Garantia</a></li>
+                    <li><a href="#">Política de Vendas</a></li>
+                    <li><a href="#">Política de privacidade</a></li>
+                    <li><a href="#">Segurança</a></li>
+                </ul>
+            </section>
+
+        </section>
+
+        <section id="copyright">
+            <p>Desenvolvedor Fullstack | &copy Handmade's Jewelry | Todos os
+                Direitos Reservados </p>
+        </section>
+    </footer>
+
+
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script id="libras" src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="./bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>
